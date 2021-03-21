@@ -1,0 +1,36 @@
+/* *{
+    background-color: gray;
+   }
+
+#top{
+    color: fuchsia;
+}
+
+h2{
+    color: gold;
+}
+
+
+li > a{
+    color: red;
+} */
+
+/* li,a{
+    color: red;
+} 
+
+
+h1, p{
+    color: rgb(121, 16, 16);
+}
+ */
+
+
+ /* h1 + p{
+     color: royalblue;
+ } */
+
+
+ h1 ~ p{
+     color: rgb(255, 106, 0);
+ }

@@ -1,0 +1,27 @@
+/* .para-2{
+ color: firebrick;
+ background-color: forestgreen;
+} */
+
+/*
+37 = green 
+0 1 2 3 4 5 6 7 8 9 a b c d e f
+0 - f 
+
+4b = red
+
+37 = blue 
+
+*/
+ /* .para-2{
+    color: #ffff00;
+}  */
+
+
+/* .para-2{
+    color: hsl(100,100%,8%);
+} */
+
+.para-2{
+    color: rgb(255, 255, 255);
+}
