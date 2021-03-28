@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+*{
+    font-family: 'Open Sans', sans-serif;
+}
+
+.para {
+    background-color: rgba(200, 200, 200, 0.8);
+    color: #333;
+    /* opacity: 0.5; */
+    /* font-family: cursive, sans-serif; */
+    
+}
