@@ -1,0 +1,43 @@
+/* div {
+ border: 1px solid #000;
+ overflow: scroll;
+}
+
+div p {
+  width: 49%;
+  display: inline-block;
+} */
+
+/* @media (max-width: 500px) {
+  div {
+    background-color: #000;
+    color: #fff;
+  }
+  
+  div p {
+    width: 100%;
+  }
+} */
+
+
+/* div p {
+  max-width: 500px;
+  border: 1px solid rgb(112, 0, 0);
+} */
+
+
+div.parent {
+  display: flex;
+  border: 1px solid #000;
+  margin: 10px;
+}
+
+div.parent div.child {
+  width: 100px;
+  height: 100px;
+  border: 1px solid #000;
+}
+
+div.col {
+  border: 1px solid #000;
+}
