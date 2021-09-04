@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .parent-box {
+            min-width: 800px;
+            border: solid 1px #eee;
+            border-radius: 5px;
+            padding: 50px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #messages {
+            margin: 10px 0;
+            border: solid 1px #eee;
+            border-radius: 5px;
+            padding: 10px;
+            float: left;
+            width: 100%;
+            max-height: 500px;
+            overflow: scroll;
+        }
+
+        .single-message-body {
+            position: relative;
+            border-radius: 10px;
+            padding: 10px;
+            width: 70%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+
+            margin: 10px 0;
+        }
+
+        .single-message-body.sender {
+            float: left;
+            background-color: #ADEFD1FF;
+            color: #00203fff;
+        }
+
+        .single-message-body.reciever {
+            float: right;
+            background-color: #00203fff;
+            color: #ADEFD1FF;
+        }
+
+        .message-sender {
+            position: absolute;
+            top: -12px;
+            background-color: #00203fff;
+            color: #ADEFD1FF;
+            padding: 3px;
+            border-radius: 5px;
+        }
+
+        .single-message-body.sender>.message-sender {
+            left: 10px;
+            background-color: #00203fff;
+            color: #ADEFD1FF;
+        }
+
+        .single-message-body.reciever>.message-sender {
+            right: 10px;
+            background-color: #ADEFD1FF;
+            color: #00203fff;
+        }
+
+        #message {
+            margin-top: 10px;
+            width: 75%;
+            display: inline-block;
+            padding: 5px;
+            border: none;
+            border-bottom: 1px solid #00203fff;
+        }
+
+        .send-button {
+            background-color: #00203fff;
+            color: #ADEFD1FF;
+            padding: 5px;
+            margin: 10px 0;
+            width: 20%;
+            float: right;
+            border-radius: 10px;
+        }
+
+        .logout,
+        .login,
+        .signup {
+            background-color: #00203fff;
+            color: #ADEFD1FF;
+            padding: 5px;
+            border-radius: 5px;
+        }
+    </style>
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script defer src="./app.js"></script>
+</head>
+
+<body>
+    <div class="parent-box">
+        <div id="login_box">
+            <input type="email" id="email" />
+            <input type="password" id="password" />
+            <button onclick="login()" class="login">Login</button>
+            <button onclick="signup()" class="signup">Signup</button>
+        </div>
+        <div id="welcome_box">
+            <div class="header">
+                <div class="welcome">
+                    Welcome User:
+                    <span id="user"></span>
+                </div>
+
+                <div class="logged-in-info">
+                    Last Logged in at:
+                    <span id="lastLoggedIn"></span>
+                </div>
+                <div>
+                    <button onclick="logout()" class="logout">Logout</button>
+                </div>
+            </div>
+
+            <div id="messages"></div>
+
+            <div>
+                <input type="text" id="message" placeholder="Type Message">
+                <button onclick="sendMessage()" class="send-button">Send</button>
+            </div>
+
+
+        </div>
+    </div>
+
+</body>
+
+</html>
